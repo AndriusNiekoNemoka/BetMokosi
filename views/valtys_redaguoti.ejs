@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valčių redagavimas</title>
+<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
+</head>
+<body style="background: url(https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)" > 
+</head>
+<body>
+<h1>Valčių duomenų redagavimas</h1>
+
+
+<form action="/valtys/redaguoti" method="post">
+  <label for="fname">Valties pavadinimas:</label>
+  <input type="text" name="pavad" value="<%=result[0].Valties_pavadinimas%>"><br><br>
+  <label for="lname">Valties savininkas:</label>
+  <input type="text" name="sav" value="<%=result[0].Valties_savininkas%>"><br><br>
+  <label for="fname">Valties savininko telefono numeris:</label>
+  <input type="text" name="telnr" value="<%=result[0].Valties_savininko_telefono_numeris%>"><br><br>
+  <input type="hidden" name="id" value="<%=result[0].id%>">
+  <input type="submit" value="Patvirtinti pakeitimus">
+</form>
+
+
+
+</body>
+</html>
