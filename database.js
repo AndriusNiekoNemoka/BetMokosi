@@ -4,7 +4,7 @@ const mysql2 = require('mysql2');
       host: "localhost",
       user: "root",
       password: "",
-      database: 'valtys'
+      database: 'uostai'
     });
     
     
