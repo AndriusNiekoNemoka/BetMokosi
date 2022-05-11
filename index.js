@@ -75,6 +75,37 @@ app.post('/valtys/redaguoti', async (req, res) => {
     res.redirect("/valtys");   
 });
 
+app.get('/uostai', async (req, res) => {
+    const results = await db.promise().query(`SELECT * FROM uostu_registras`);
+	res.render("uostai", result = results[0]);
+});
+
+app.get('/uostai_prideti', async (req, res) => {
+    res.render("uostai_prideti");
+});
+
+app.post('/uostai/nusiustiu', async (req, res) => {
+    const results = await db.promise().query(`INSERT INTO uostu_registras (id, Uosto_pavadinimas, Uosto_koordinates, Uosto_miestas) VALUES (NULL, '${req.body.upavad}', '${req.body.ukoor}', '${req.body.umiest}')`);
+      res.redirect("/uostai");
+  });
+
+  app.get('/uostai_redaguoti/:id', async (req, res) => {
+    let id = req.params.id;
+    let results = await db.promise().query(`SELECT * FROM  uostu_registras WHERE id = ${id}`);
+    res.render("Uostai_redaguoti", result = results[0]);
+});
+
+  app.post('/uostai/redaguoti', async (req, res) => {
+   const results = await db.promise().query(`UPDATE uostu_registras SET Uosto_pavadinimas = '${req.body.upavad}', Uosto_koordinates = '${req.body.ukoor}', Uosto_miestas = '${req.body.umiest}' WHERE uostu_registras.id = '${req.body.id}'`);
+   res.redirect("/uostai");   
+});
+
+app.get('/uostai/istrinti/:id', async (req, res) => {
+    let id = req.params.id;
+    const results = await db.promise().query(`DELETE FROM uostu_registras WHERE id=${id}  LIMIT 1`);
+    res.redirect('/uostai');    
+});
+
 
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`); 

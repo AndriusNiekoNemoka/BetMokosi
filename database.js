@@ -6,5 +6,4 @@
       password: "",
       database: 'valtys'
     });
-    
-    
+  

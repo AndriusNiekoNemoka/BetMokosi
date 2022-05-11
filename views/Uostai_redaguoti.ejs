@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uostų duomenų redagavimas</title>
+<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
+</head>
+<body style="background: url(https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)" > 
+</head>
+
+<body>
+<h1>Uostų duomenų redagavimas</h1>
+
+
+<form action="/uostai/redaguoti" method="post">
+  <label for="fname">Uosto pavadinimas:</label>
+  <input type="text" name="upavad" value="<%=result[0].Uosto_pavadinimas%>"><br><br>
+  <label for="lname">Uosto koordinates:</label>
+  <input type="text" name="ukoor" value="<%=result[0].Uosto_koordinates%>"><br><br>
+  <label for="fname">Uosto miestas:</label>
+  <input type="text" name="umiest" value="<%=result[0].Uosto_miestas%>"><br><br>
+  <input type="hidden" name="id" value="<%=result[0].id%>">
+  <input type="submit" value="Patvirtinti pakeitimus">
+</form>
+
+
+</body>
+</html>

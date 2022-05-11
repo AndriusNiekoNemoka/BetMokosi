@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uostai</title>
+<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
+</head>
+<body style="background: url(https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)" > 
+</tr>
+	<style>
+		table, th, td {
+		  border:1px solid black;
+		}
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+		</style>
+ <center><h1>UOSTŲ DUOMENU BAZE </h1></center> 
+<table align="center"> 
+	<tr>
+	<th> Uosto pavadinimas  </th>
+	<th> Uosto koordinatės </th>
+	<th> Uosto miestas </th>
+	<th> Redaguoti </th>
+	<th> Ištrinti </th>
+  </tr>
+
+  <% 
+  for(var i=0; i<result.length; i++)
+  {
+  %>
+      <tr> 
+        <td><%=result[i].Uosto_pavadinimas%></td>
+        <td><%=result[i].Uosto_koordinates%></td>
+        <td><%=result[i].Uosto_miestas%></td>
+        <td> <input type="button" onclick="window.location.href='/uostai_redaguoti/<%=result[i].id%>'"  value="Redaguoti"> </td>
+        <td> <input type="button" onclick="window.location.href='/uostai/istrinti/<%=result[i].id%>'" value="Ištrinti"> </td>
+      </tr>	
+  <br>
+      <%
+  }
+  %>
+  <td colspan="5" align="center"><button input type="button" onclick="window.location.href='http://localhost:5000/uostai_prideti';"> Pridėti</button> </td>
+  </table>
+
+
+
+ <center> <a href="#" onclick="onclick=window.location.href='http://localhost:5000/';" class="button">Home</a> </center>
+  
+</table>
+
+
+
+</body>
+</html>
+
+
+
+
+
