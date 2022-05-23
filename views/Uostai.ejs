@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Uostai</title>
-<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
-</head>
-<body style="background: url(https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)" > 
-</tr>
+	<title>Valtys</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
 	<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+	.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+	.fa-anchor,.fa-coffee {font-size:200px}
 		table, th, td {
-		  border:1px solid black;
+		  border: 3px solid black;
 		}
-        .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-		</style>
- <center><h1>UOSTŲ DUOMENU BAZE </h1></center> 
+		</style>	
+    	<div class="w3-top" >
+			<div class="w3-bar w3-red w3-card w3-left-align w3-large">
+			  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			  <a href="http://localhost:5000/" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+			  <a href="http://localhost:5000/valtys" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Valtys </a>
+			  <a href="http://localhost:5000/Uostai" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Uostai</a>
+			</div>
+		  
+			<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+			</div>
+		  </div>
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<h1 class="w3-margin w3-jumbo">Uostų duomenų bazė</h1>
+</header>
 <table align="center"> 
 	<tr>
 	<th> Uosto pavadinimas  </th>
@@ -51,9 +58,6 @@
   <td colspan="5" align="center"><button input type="button" onclick="window.location.href='http://localhost:5000/uostai_prideti';"> Pridėti</button> </td>
   </table>
 
-
-
- <center> <a href="#" onclick="onclick=window.location.href='http://localhost:5000/';" class="button">Home</a> </center>
   
 </table>
 
