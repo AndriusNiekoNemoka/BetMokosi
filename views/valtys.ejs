@@ -10,14 +10,33 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/x-icon" href="https://images4.imagebam.com/1a/1a/0d/ME95SYB_o.png"> 
 	<style>
-	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-	.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-	.fa-anchor,.fa-coffee {font-size:200px}
-	</style>
-	<style>
-		table, th, td {
-		  border: 3px solid black;
-		}
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+		.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+		.fa-anchor,.fa-coffee {font-size:200px}
+	
+		table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.btn {
+  border: none;
+  background-color: rgb(255, 101, 30);
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
 		</style>
 		<div class="w3-top" >
 			<div class="w3-bar w3-red w3-card w3-left-align w3-large">
@@ -49,14 +68,15 @@ for(var i=0; i<result.length; i++)
 	  <td><%=result[i].Valties_pavadinimas%></td>
 	  <td><%=result[i].Valties_savininkas%></td>
 	  <td><%=result[i].Valties_savininko_telefono_numeris%></td>
-	  <td> <input type="button" onclick="window.location.href='/valtys_redaguoti/<%=result[i].id%>'"  value="Redaguoti"> </td>
-	  <td> <input type="button" onclick="window.location.href='/valtys/istrinti/<%=result[i].id%>'" value="Ištrinti"> </td>
+	  <td> <button type="button" onclick="window.location.href='/valtys_redaguoti/<%=result[i].id%>'" class="btn"><i class="fa fa-pencil"></i> Redaguoti</button> </td>
+	  <td> <button type="button" onclick="window.location.href='/valtys/istrinti/<%=result[i].id%>'" class="btn"><i class="fa fa-trash"></i> Ištrinti</button> </td>
 	</tr>	
 <br>
+
 	<%
 }
 %>
-<td colspan="5" align="center"><button input type="button" onclick="window.location.href='http://localhost:5000/valtys_prideti';"> Pridėti</button> </td>
+<td colspan="5" align="center"><button input type="button" onclick="window.location.href='http://localhost:5000/valtys_prideti';" class="btn"><i class="fa fa-plus"></i> Pridėti</button> </td>
 </table>
 
 </body>
