@@ -106,6 +106,9 @@ app.get('/uostai/istrinti/:id', async (req, res) => {
     res.redirect('/uostai');    
 });
 
+app.get('/test', async (req, res) => {
+    res.render("test");
+});
 
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`); 
